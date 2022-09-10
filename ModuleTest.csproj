@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\New-KTANE-Solver\New-KTANE-Solver.csproj" />
+    <ProjectReference Include="..\KTANE-Solver\New-KTANE-Solver.csproj" />
   </ItemGroup>
 
 </Project>
