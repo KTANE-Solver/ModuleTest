@@ -515,6 +515,7 @@ namespace ModuleTest
             Chess module = new Chess("D1", "D2", "B5", "E2", "F6", "C3", bomb, io);
 
             Assert.AreEqual(module.Solve(true), "B1");
+            io.Close();
         }
 
         [TestMethod]
@@ -876,6 +877,7 @@ namespace ModuleTest
             Chess module = new Chess("B3", "F3", "B5", "B1", "F2", "F4", bomb, io);
 
             Assert.AreEqual(module.Solve(true), "A3");
+            io.Close();
         }
 
         [TestMethod]
