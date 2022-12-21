@@ -9,7 +9,6 @@ namespace ModuleTest
     [TestClass]
     public class AdjacentLettersTest
     {
-        //https://ktane.timwi.de/lfa#file=90f0a6d56e9477ae97f1e17ffea79de49dac6390
 
         StreamWriter io = new StreamWriter("dummy.txt");
 
@@ -33,7 +32,7 @@ namespace ModuleTest
                 {true, false, false, false }
             };
 
-            bool[,] output =  module.Solve(true);
+            bool[,] output = module.Solve(true);
 
             Assert.IsTrue(SameGrid(answer, output));
 
@@ -149,11 +148,11 @@ namespace ModuleTest
         }
 
         private bool SameGrid(bool[,] b1, bool[,] b2)
-        { 
+        {
             int rowLength = b1.GetLength(0);
             int colLength = b1.GetLength(1);
 
-            for(int row = 0; row < rowLength; row++)
+            for (int row = 0; row < rowLength; row++)
             {
                 for (int col = 0; col < colLength; col++)
                 {
