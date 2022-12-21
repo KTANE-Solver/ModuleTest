@@ -5,8 +5,7 @@ using System.Windows.Forms;
 
 namespace ModuleTest
 {
-    //https://ktane.timwi.de/lfa#file=a91d428b68660c77dad939e15e8be8964763509c
-
+    //https://ktane.timwi.de/lfa#file=f1086af2dfd47135607c8755c0082d2bcb446dcf
     [TestClass]
     public class BlindAlleyTest
     {
