@@ -12,7 +12,7 @@ namespace ModuleTests
         [TestMethod]
         public void TestMethod1()
         {
-            Bomb bomb = new Bomb(System.Windows.Forms.Day.Saturday, "MQ6EV4", 0, 0, new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), false, 0, null, null, null, null, null, null);
+            Bomb bomb = null;
 
             string text = "231084675";
 
@@ -37,7 +37,8 @@ namespace ModuleTests
         [TestMethod]
         public void TestMethod2()
         {
-            Bomb bomb = new Bomb(System.Windows.Forms.Day.Saturday, "TU7JE6", 0, 0, new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), false, 0, null, null, null, null, null, null);
+            Bomb bomb = null;
+
 
             string text = "457831206";
 

@@ -12,13 +12,7 @@ namespace ModuleTest
 
         StreamWriter streamWriter = new StreamWriter("dummy.txt");
 
-        Bomb bomb = new Bomb(Day.Sunday, "UA1TN5", 1, 1,
-            new Indicator("BOB", false, false), new Indicator("CAR", false, false), new Indicator("CLR", false, false),
-            new Indicator("FRK", false, false), new Indicator("FRQ", false, false), new Indicator("IND", false, false),
-            new Indicator("MSA", true, false), new Indicator("NSA", false, false), new Indicator("SIG", false, false),
-            new Indicator("SND", false, false), new Indicator("TRN", true, true), false, 0,
-            new Port("DVID", 0), new Port("Parallel", 0), new Port("ps", 1),
-            new Port("rj", 2), new Port("serial", 0), new Port("setero", 2));
+        Bomb bomb = null;
 
         [TestMethod]
         public void Test1()

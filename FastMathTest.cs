@@ -13,10 +13,7 @@ namespace ModuleTests
         [TestMethod]
         public void LettersGiveCorrectAnswers()
         {
-            Bomb bomb = new Bomb(Day.Sunday, "IIIII", 1, 1, new Indicator("BOB", false, false), new Indicator("CAR", false, false),
-                    new Indicator("CLR", false, false), new Indicator("FRK", true, true), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", false, false), new Indicator("NSA", false, false),
-                    new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", true, true), false, 2, new Port("DVID", 0), new Port("Parallel", 1),
-                    new Port("ps", 0), new Port("rj", 0), new Port("serial", 0), new Port("setero", 0));
+            Bomb bomb = null;
 
             FastMath module = new FastMath(bomb, streamWriter);
 
@@ -198,47 +195,36 @@ namespace ModuleTests
         [TestMethod]
         public void Overrides()
         {
-            Bomb bomb = new Bomb(Day.Sunday, "IIIII", 1, 1, new Indicator("BOB", false, false), new Indicator("CAR", false, false),
-        new Indicator("CLR", false, false), new Indicator("FRK", true, true), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", true, true), new Indicator("NSA", false, false),
-        new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", true, true), false, 2, new Port("DVID", 0), new Port("Parallel", 1),
-        new Port("ps", 0), new Port("rj", 0), new Port("serial", 0), new Port("setero", 0));
+            Bomb bomb = null;
+
 
             FastMath module = new FastMath(bomb, streamWriter);
 
             Assert.AreEqual(25 + 20, module.SolveDebug('A', 'A'));
 
-            bomb = new Bomb(Day.Sunday, "IIIII", 1, 1, new Indicator("BOB", false, false), new Indicator("CAR", false, false),
-        new Indicator("CLR", false, false), new Indicator("FRK", true, true), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", false, false), new Indicator("NSA", false, false),
-        new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", true, true), false, 2, new Port("DVID", 0), new Port("Parallel", 1),
-        new Port("ps", 0), new Port("rj", 0), new Port("serial", 1), new Port("setero", 0));
+            bomb = null;
+
 
             module = new FastMath(bomb, streamWriter);
 
             Assert.AreEqual(25 + 14, module.SolveDebug('A', 'A'));
 
-            bomb = new Bomb(Day.Sunday, "F", 1, 1, new Indicator("BOB", false, false), new Indicator("CAR", false, false),
-        new Indicator("CLR", false, false), new Indicator("FRK", true, true), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", false, false), new Indicator("NSA", false, false),
-        new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", true, true), false, 2, new Port("DVID", 0), new Port("Parallel", 1),
-        new Port("ps", 0), new Port("rj", 0), new Port("serial", 0), new Port("setero", 0));
+            bomb = null;
+
 
             module = new FastMath(bomb, streamWriter);
             
             Assert.AreEqual(25 - 5, module.SolveDebug('A', 'A'));
 
 
-            bomb = new Bomb(Day.Sunday, "IIIII", 1, 1, new Indicator("BOB", false, false), new Indicator("CAR", false, false),
-        new Indicator("CLR", false, false), new Indicator("FRK", true, true), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", false, false), new Indicator("NSA", false, false),
-        new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", true, true), false, 2, new Port("DVID", 0), new Port("Parallel", 1),
-        new Port("ps", 0), new Port("rj", 1), new Port("serial", 0), new Port("setero", 0));
+            bomb = null;
+
 
             module = new FastMath(bomb, streamWriter);
 
             Assert.AreEqual(25 + 27, module.SolveDebug('A', 'A'));
 
-            bomb = new Bomb(Day.Sunday, "IIIII", 4, 4, new Indicator("BOB", false, false), new Indicator("CAR", false, false),
-        new Indicator("CLR", false, false), new Indicator("FRK", true, true), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", false, false), new Indicator("NSA", false, false),
-        new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", true, true), false, 2, new Port("DVID", 0), new Port("Parallel", 1),
-        new Port("ps", 0), new Port("rj", 0), new Port("serial", 0), new Port("setero", 0));
+            bomb = null;
 
             module = new FastMath(bomb, streamWriter);
 

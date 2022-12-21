@@ -11,10 +11,7 @@ namespace ModuleTests
     {
         StreamWriter streamWriter = new StreamWriter("dummy.txt");
 
-        Bomb bomb = new Bomb(Day.Sunday, "IIIII1", 1, 1, new Indicator("BOB", false, false), new Indicator("CAR", false, false),
-        new Indicator("CLR", false, false), new Indicator("FRK", true, true), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", false, false), new Indicator("NSA", false, false),
-        new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", true, true), false, 2, new Port("DVID", 0), new Port("Parallel", 1),
-        new Port("ps", 0), new Port("rj", 0), new Port("serial", 1), new Port("setero", 0));
+        Bomb bomb = null;
 
         [TestMethod]
         public void TicketsInitialized()
@@ -87,8 +84,6 @@ namespace ModuleTests
             Assert.IsTrue(module.ticketList[15].SameTicketShapes(ShapeShift.TicketShape.Flat, ShapeShift.TicketShape.Point));
             Assert.IsTrue(module.ticketList[15].trueTicket.SameTicketShapes(ShapeShift.TicketShape.Ticket, ShapeShift.TicketShape.Point));
             Assert.IsTrue(module.ticketList[15].falseTicket.SameTicketShapes(ShapeShift.TicketShape.Point, ShapeShift.TicketShape.Flat));
-
-
         }
     }
 }

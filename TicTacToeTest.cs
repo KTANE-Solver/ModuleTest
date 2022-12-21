@@ -110,10 +110,7 @@ namespace ModuleTests
         {
 
             //1
-            Bomb bomb = new Bomb(Day.Sunday, "1", 1, 1, new Indicator("BOB", false, false), new Indicator("CAR", false, false),
-                   new Indicator("CLR", false, false), new Indicator("FRK", true, false), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", false, false), new Indicator("NSA", false, false),
-                   new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2, new Port("DVID", 0), new Port("Parallel", 0),
-                   new Port("ps", 0), new Port("rj", 0), new Port("serial", 1), new Port("setero", 0));
+            Bomb bomb = null;
 
             TicTacToe module = new TicTacToe(bomb, streamWriter, null);
             module.FindStartingRow();
@@ -121,10 +118,7 @@ namespace ModuleTests
             Assert.AreEqual(1, module.currentRow);
 
             //2
-            bomb = new Bomb(Day.Sunday, "1", 1, 1, new Indicator("BOB", false, false), new Indicator("CAR", false, false),
-            new Indicator("CLR", false, false), new Indicator("FRK", true, false), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", false, false), new Indicator("NSA", false, false),
-            new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2, new Port("DVID", 0), new Port("Parallel", 1),
-            new Port("ps", 0), new Port("rj", 0), new Port("serial", 1), new Port("setero", 0));
+            bomb = null;
 
             module = new TicTacToe(bomb, streamWriter, null);
             module.FindStartingRow();
@@ -132,10 +126,7 @@ namespace ModuleTests
             Assert.AreEqual(2, module.currentRow);
 
             //3
-            bomb = new Bomb(Day.Sunday, "1", 1, 1, new Indicator("BOB", true, false), new Indicator("CAR", true, true),
-            new Indicator("CLR", false, false), new Indicator("FRK", false, false), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", false, false), new Indicator("NSA", false, false),
-            new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2, new Port("DVID", 0), new Port("Parallel", 1),
-            new Port("ps", 0), new Port("rj", 0), new Port("serial", 1), new Port("setero", 0));
+            bomb = null;
 
             module = new TicTacToe(bomb, streamWriter, null);
             module.FindStartingRow();
@@ -143,10 +134,7 @@ namespace ModuleTests
             Assert.AreEqual(3, module.currentRow);
 
             //4
-            bomb = new Bomb(Day.Sunday, "1", 1, 1, new Indicator("BOB", false, false), new Indicator("CAR", true, true),
-            new Indicator("CLR", false, false), new Indicator("FRK", false, false), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", false, false), new Indicator("NSA", false, false),
-            new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2, new Port("DVID", 0), new Port("Parallel", 1),
-            new Port("ps", 0), new Port("rj", 0), new Port("serial", 1), new Port("setero", 0));
+            bomb = null;
 
             module = new TicTacToe(bomb, streamWriter, null);
             module.FindStartingRow();
@@ -154,10 +142,7 @@ namespace ModuleTests
             Assert.AreEqual(4, module.currentRow);
 
             //5
-            bomb = new Bomb(Day.Sunday, "0", 1, 1, new Indicator("BOB", false, false), new Indicator("CAR", false, false),
-                   new Indicator("CLR", false, false), new Indicator("FRK", true, false), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", false, false), new Indicator("NSA", false, false),
-                   new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2, new Port("DVID", 0), new Port("Parallel", 0),
-                   new Port("ps", 0), new Port("rj", 0), new Port("serial", 1), new Port("setero", 0));
+            bomb = null;
 
             module = new TicTacToe(bomb, streamWriter, null);
             module.FindStartingRow();
@@ -165,10 +150,7 @@ namespace ModuleTests
             Assert.AreEqual(5, module.currentRow);
 
             //6
-            bomb = new Bomb(Day.Sunday, "0", 1, 1, new Indicator("BOB", false, false), new Indicator("CAR", false, false),
-            new Indicator("CLR", false, false), new Indicator("FRK", true, false), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", false, false), new Indicator("NSA", false, false),
-            new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2, new Port("DVID", 0), new Port("Parallel", 1),
-            new Port("ps", 0), new Port("rj", 0), new Port("serial", 1), new Port("setero", 0));
+            bomb = null;
 
             module = new TicTacToe(bomb, streamWriter, null);
             module.FindStartingRow();
@@ -176,10 +158,7 @@ namespace ModuleTests
             Assert.AreEqual(6, module.currentRow);
 
             //7
-            bomb = new Bomb(Day.Sunday, "0", 1, 1, new Indicator("BOB", true, false), new Indicator("CAR", true, true),
-            new Indicator("CLR", false, false), new Indicator("FRK", false, false), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", false, false), new Indicator("NSA", false, false),
-            new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2, new Port("DVID", 0), new Port("Parallel", 1),
-            new Port("ps", 0), new Port("rj", 0), new Port("serial", 1), new Port("setero", 0));
+            bomb = null;
 
             module = new TicTacToe(bomb, streamWriter, null);
             module.FindStartingRow();
@@ -187,10 +166,7 @@ namespace ModuleTests
             Assert.AreEqual(7, module.currentRow);
 
             //8
-            bomb = new Bomb(Day.Sunday, "0", 1, 1, new Indicator("BOB", false, false), new Indicator("CAR", true, true),
-            new Indicator("CLR", false, false), new Indicator("FRK", false, false), new Indicator("FRQ", false, false), new Indicator("IND", false, false), new Indicator("MSA", false, false), new Indicator("NSA", false, false),
-            new Indicator("SIG", false, false), new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2, new Port("DVID", 0), new Port("Parallel", 1),
-            new Port("ps", 0), new Port("rj", 0), new Port("serial", 1), new Port("setero", 0));
+            bomb = null;
 
             module = new TicTacToe(bomb, streamWriter, null);
             module.FindStartingRow();

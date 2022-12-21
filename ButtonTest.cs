@@ -16,13 +16,7 @@ namespace ModuleTest
         [TestMethod]
         public void BlueAbort()
         {
-            Bomb bomb = new Bomb(Day.Sunday, "IIIII", 2, 2,
-            new Indicator("BOB", false, false), new Indicator("CAR", false, false), new Indicator("CLR", false, false),
-            new Indicator("FRK", false, false), new Indicator("FRQ", false, false), new Indicator("IND", false, false),
-            new Indicator("MSA", false, false), new Indicator("NSA", false, false), new Indicator("SIG", false, false),
-            new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2,
-            new Port("DVID", 0), new Port("Parallel", 1), new Port("ps", 0),
-            new Port("rj", 0), new Port("serial", 0), new Port("setero", 0));
+            Bomb bomb = null;
 
             New_KTANE_Solver.Button module = new New_KTANE_Solver.Button(bomb, io);
 
@@ -34,13 +28,7 @@ namespace ModuleTest
         [TestMethod]
         public void Detonate1Battery()
         {
-            Bomb bomb = new Bomb(Day.Sunday, "IIIII", 2, 2,
-            new Indicator("BOB", false, false), new Indicator("CAR", false, false), new Indicator("CLR", false, false),
-            new Indicator("FRK", false, false), new Indicator("FRQ", false, false), new Indicator("IND", false, false),
-            new Indicator("MSA", false, false), new Indicator("NSA", false, false), new Indicator("SIG", false, false),
-            new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2,
-            new Port("DVID", 0), new Port("Parallel", 1), new Port("ps", 0),
-            new Port("rj", 0), new Port("serial", 0), new Port("setero", 0));
+            Bomb bomb = null;
 
             New_KTANE_Solver.Button module = new New_KTANE_Solver.Button(bomb, io);
 
@@ -52,13 +40,7 @@ namespace ModuleTest
         [TestMethod]
         public void WhiteLitCar()
         {
-            Bomb bomb = new Bomb(Day.Sunday, "IIIII", 1, 1,
-            new Indicator("BOB", false, false), new Indicator("CAR", true, true), new Indicator("CLR", false, false),
-            new Indicator("FRK", false, false), new Indicator("FRQ", false, false), new Indicator("IND", false, false),
-            new Indicator("MSA", false, false), new Indicator("NSA", false, false), new Indicator("SIG", false, false),
-            new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2,
-            new Port("DVID", 0), new Port("Parallel", 1), new Port("ps", 0),
-            new Port("rj", 0), new Port("serial", 0), new Port("setero", 0));
+            Bomb bomb = null;
 
             New_KTANE_Solver.Button module = new New_KTANE_Solver.Button(bomb, io);
 
@@ -70,13 +52,7 @@ namespace ModuleTest
         [TestMethod]
         public void LitFRK2Battery()
         {
-            Bomb bomb = new Bomb(Day.Sunday, "IIIII", 3, 3,
-            new Indicator("BOB", false, false), new Indicator("CAR", false, false), new Indicator("CLR", false, false),
-            new Indicator("FRK", true, true), new Indicator("FRQ", false, false), new Indicator("IND", false, false),
-            new Indicator("MSA", false, false), new Indicator("NSA", false, false), new Indicator("SIG", false, false),
-            new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2,
-            new Port("DVID", 0), new Port("Parallel", 1), new Port("ps", 0),
-            new Port("rj", 0), new Port("serial", 0), new Port("setero", 0));
+            Bomb bomb = null;
 
             New_KTANE_Solver.Button module = new New_KTANE_Solver.Button(bomb, io);
 
@@ -88,13 +64,7 @@ namespace ModuleTest
         [TestMethod]
         public void Yellow()
         {
-            Bomb bomb = new Bomb(Day.Sunday, "IIIII", 1, 1,
-            new Indicator("BOB", false, false), new Indicator("CAR", false, false), new Indicator("CLR", false, false),
-            new Indicator("FRK", true, true), new Indicator("FRQ", false, false), new Indicator("IND", false, false),
-            new Indicator("MSA", false, false), new Indicator("NSA", false, false), new Indicator("SIG", false, false),
-            new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2,
-            new Port("DVID", 0), new Port("Parallel", 1), new Port("ps", 0),
-            new Port("rj", 0), new Port("serial", 0), new Port("setero", 0));
+            Bomb bomb = null;
 
             New_KTANE_Solver.Button module = new New_KTANE_Solver.Button(bomb, io);
 
@@ -106,13 +76,7 @@ namespace ModuleTest
         [TestMethod]
         public void RedHold()
         {
-            Bomb bomb = new Bomb(Day.Sunday, "IIIII", 1, 1,
-            new Indicator("BOB", false, false), new Indicator("CAR", false, false), new Indicator("CLR", false, false),
-            new Indicator("FRK", true, true), new Indicator("FRQ", false, false), new Indicator("IND", false, false),
-            new Indicator("MSA", false, false), new Indicator("NSA", false, false), new Indicator("SIG", false, false),
-            new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2,
-            new Port("DVID", 0), new Port("Parallel", 1), new Port("ps", 0),
-            new Port("rj", 0), new Port("serial", 0), new Port("setero", 0));
+            Bomb bomb = null;
 
             New_KTANE_Solver.Button module = new New_KTANE_Solver.Button(bomb, io);
 
@@ -124,13 +88,7 @@ namespace ModuleTest
         [TestMethod]
         public void Other()
         {
-            Bomb bomb = new Bomb(Day.Sunday, "IIIII", 1, 1,
-            new Indicator("BOB", false, false), new Indicator("CAR", false, false), new Indicator("CLR", false, false),
-            new Indicator("FRK", true, true), new Indicator("FRQ", false, false), new Indicator("IND", false, false),
-            new Indicator("MSA", false, false), new Indicator("NSA", false, false), new Indicator("SIG", false, false),
-            new Indicator("SND", false, false), new Indicator("TRN", false, false), false, 2,
-            new Port("DVID", 0), new Port("Parallel", 1), new Port("ps", 0),
-            new Port("rj", 0), new Port("serial", 0), new Port("setero", 0));
+            Bomb bomb = null;
 
             New_KTANE_Solver.Button module = new New_KTANE_Solver.Button(bomb, io);
 

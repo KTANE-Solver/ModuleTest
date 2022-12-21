@@ -12,13 +12,7 @@ namespace ModuleTests
     {
         StreamWriter io = new StreamWriter("dummy.txt");
 
-        Bomb bomb = new Bomb(Day.Sunday, "JF9TX4", 6, 4,
-        new Indicator("BOB", false, false), new Indicator("CAR", false, false), new Indicator("CLR", true, false),
-        new Indicator("FRK", false, false), new Indicator("FRQ", false, false), new Indicator("IND", false, false),
-        new Indicator("MSA", false, false), new Indicator("NSA", false, false), new Indicator("SIG", false, false),
-        new Indicator("SND", true, false), new Indicator("TRN", true, false), false, 2,
-        new Port("DVID", 0), new Port("Parallel", 0), new Port("ps", 0),
-        new Port("rj", 0), new Port("serial", 1), new Port("stero", 0));
+        Bomb bomb = null;
 
         List<ComplicatedWire> wireList; 
 

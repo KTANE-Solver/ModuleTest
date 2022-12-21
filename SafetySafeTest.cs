@@ -23,7 +23,7 @@ namespace ModuleTests
                 char letter = (char)(i + 65);
 
                 string serialNumber = "" + letter + letter + letter + letter + letter + letter;
-                bomb = new Bomb(Day.Sunday, serialNumber, 0, 0, new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), false, 0, new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0));
+                bomb = null;
 
                 SafetySafe module = new SafetySafe(bomb, streamWriter);
 
@@ -191,7 +191,7 @@ namespace ModuleTests
                 char letter = (char)(i + 65);
 
                 string serialNumber = "" + letter + letter + letter + letter + letter + letter;
-                bomb = new Bomb(Day.Sunday, serialNumber, 0, 0, new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), false, 0, new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0));
+                bomb = null;
 
                 SafetySafe module = new SafetySafe(bomb, streamWriter);
 
@@ -359,7 +359,7 @@ namespace ModuleTests
                 char letter = (char)(i + 65);
 
                 string serialNumber = "" + letter + letter + letter + letter + letter + letter;
-                bomb = new Bomb(Day.Sunday, serialNumber, 0, 0, new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), false, 0, new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0));
+                bomb = null;
 
                 SafetySafe module = new SafetySafe(bomb, streamWriter);
 
@@ -530,7 +530,7 @@ namespace ModuleTests
                 char letter = (char)(i + 65);
 
                 string serialNumber = "" + letter + letter + letter + letter + letter + letter;
-                bomb = new Bomb(Day.Sunday, serialNumber, 0, 0, new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), false, 0, new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0));
+                bomb = null;
 
                 SafetySafe module = new SafetySafe(bomb, streamWriter);
 
@@ -699,7 +699,7 @@ namespace ModuleTests
                 char letter = (char)(i + 65);
 
                 string serialNumber = "" + letter + letter + letter + letter + letter + letter;
-                bomb = new Bomb(Day.Sunday, serialNumber, 0, 0, new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), false, 0, new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0));
+                bomb = null;
 
                 SafetySafe module = new SafetySafe(bomb, streamWriter);
 
@@ -868,7 +868,7 @@ namespace ModuleTests
                 char letter = (char)(i + 65);
 
                 string serialNumber = "" + letter + letter + letter + letter + letter + letter;
-                bomb = new Bomb(Day.Sunday, serialNumber, 0, 0, new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), new Indicator("", false, false), false, 0, new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0), new Port("", 0));
+                bomb = null;
 
                 SafetySafe module = new SafetySafe(bomb, streamWriter);
 
