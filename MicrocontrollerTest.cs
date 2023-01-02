@@ -2,6 +2,9 @@ using System.Drawing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using New_KTANE_Solver;
 using System.Windows.Forms;
+using System.Runtime.CompilerServices;
+using System.Formats.Asn1;
+using static New_KTANE_Solver.Microcontroller.DotPos;
 
 namespace ModuleTest
 {
@@ -10,96 +13,153 @@ namespace ModuleTest
     {
         //https://ktane.timwi.de/More/Logfile%20Analyzer.html#file=f24110e5b9b0dbaa286c6725c69a2680c2b88bee;bomb=UA1TN5
 
-        StreamWriter streamWriter = new StreamWriter("dummy.txt");
+        StreamWriter io = new StreamWriter("dummy.txt");
 
-        Bomb bomb = null;
+        Bomb bomb = new Bomb(Day.Sunday, "UA1TN5", 2, 1,
+    new Indicator("BOB", false, false), new Indicator("CAR", false, false), new Indicator("CLR", false, false),
+    new Indicator("FRK", false, false), new Indicator("FRQ", false, false), new Indicator("IND", false, false),
+    new Indicator("MSA", true, false), new Indicator("NSA", false, false), new Indicator("SIG", false, false),
+    new Indicator("SND", false, false), new Indicator("TRN", true, true), new List<Plate>()
+{
+            new Plate(false, true, false, true, false, true),
+            new Plate(false, true, false, true, false, false) });
 
         [TestMethod]
         public void Test1()
         {
-            Microcontroller module = new Microcontroller(bomb, streamWriter, "Bottom Left", "STRK", 8, 0, 1);
+            Microcontroller module = new Microcontroller(bomb, io, BL, "STRK", 8, 0, 1);
 
-            List<Color> list = module.Solve();
-            Assert.AreEqual("White", list[0].Name.Replace("[","").Replace("]",""));
-            Assert.AreEqual("Red", list[1].Name.Replace("[","").Replace("]",""));
-            Assert.AreEqual("White", list[2].Name.Replace("[","").Replace("]",""));
-            Assert.AreEqual("Yellow", list[3].Name.Replace("[","").Replace("]",""));
-            Assert.AreEqual("Magenta", list[4].Name.Replace("[","").Replace("]",""));
-            Assert.AreEqual("Blue", list[5].Name.Replace("[","").Replace("]",""));
-            Assert.AreEqual("White", list[6].Name.Replace("[","").Replace("]",""));
-            Assert.AreEqual("Green", list[7].Name.Replace("[","").Replace("]",""));
+            List<Color> colors = module.Solve();
 
-            streamWriter.Close();
+            List<string> answer = ConvertColorToString(colors);
+
+            io.Close();
+
+
+
+            Assert.AreEqual("Magenta", answer[4]);
+            Assert.AreEqual("Blue", answer[5]);
+            Assert.AreEqual("White", answer[6]);
+            Assert.AreEqual("Green", answer[7]);
+            Assert.AreEqual("Yellow", answer[3]);
+            Assert.AreEqual("White", answer[2]);
+            Assert.AreEqual("Red", answer[1]);
+            Assert.AreEqual("White", answer[0]);
         }
 
         [TestMethod]
         public void Test2()
         {
-            Microcontroller module = new Microcontroller(bomb, streamWriter, "Bottom Left", "CNTD", 8, 9, 7);
+            Microcontroller module = new Microcontroller(bomb, io, BL, "CNTD", 8, 9, 7);
 
-            List<Color> list = module.Solve();
-            Assert.AreEqual("Blue", list[0].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Magenta", list[1].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("White", list[2].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Red", list[3].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Green", list[4].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("White", list[5].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("White", list[6].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Yellow", list[7].Name.Replace("[", "").Replace("]", ""));
-            streamWriter.Close();
+            List<Color> colors = module.Solve();
+
+            List<string> answer = ConvertColorToString(colors);
+
+            io.Close();
+
+            Assert.AreEqual("Green", answer[4]);
+            Assert.AreEqual("White", answer[5]);
+            Assert.AreEqual("White", answer[6]);
+            Assert.AreEqual("Yellow", answer[7]);
+            Assert.AreEqual("Red", answer[3]);
+            Assert.AreEqual("White", answer[2]);
+            Assert.AreEqual("Magenta", answer[1]);
+            Assert.AreEqual("Blue", answer[0]);
         }
 
         [TestMethod]
         public void Test3()
         {
-            Microcontroller module = new Microcontroller(bomb, streamWriter, "Top Left", "STRK", 10, 9, 8);
+            Microcontroller module = new Microcontroller(bomb, io, TL, "STRK", 10, 9, 8);
 
-            List<Color> list = module.Solve();
-            Assert.AreEqual("White", list[0].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("White", list[1].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("White", list[2].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("White", list[3].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Red", list[4].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Green", list[5].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Blue", list[6].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Yellow", list[7].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("White", list[8].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Magenta", list[9].Name.Replace("[", "").Replace("]", ""));
-            streamWriter.Close();
+            List<Color> colors = module.Solve();
+
+            List<string> answer = ConvertColorToString(colors);
+
+            io.Close();
+
+            Assert.AreEqual("White", answer[0]);
+            Assert.AreEqual("White", answer[1]);
+            Assert.AreEqual("White", answer[2]);
+            Assert.AreEqual("White", answer[3]);
+            Assert.AreEqual("Red", answer[4]);
+            Assert.AreEqual("Magenta", answer[9]);
+            Assert.AreEqual("White", answer[8]);
+            Assert.AreEqual("Yellow", answer[7]);
+            Assert.AreEqual("Blue", answer[6]);
+            Assert.AreEqual("Green", answer[5]);
+
         }
 
         [TestMethod]
         public void Test4()
         {
-            Microcontroller module = new Microcontroller(bomb, streamWriter, "Bottom Left", "STRK", 6, 9, 1);
+            Microcontroller module = new Microcontroller(bomb, io, BL, "STRK", 6, 9, 1);
 
-            List<Color> list = module.Solve();
-            Assert.AreEqual("White", list[0].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Blue", list[1].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Green", list[2].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Magenta", list[3].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Yellow", list[4].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Red", list[5].Name.Replace("[", "").Replace("]", ""));
-            streamWriter.Close();
+            List<Color> colors = module.Solve();
+
+            List<string> answer = ConvertColorToString(colors);
+
+            io.Close();
+
+            Assert.AreEqual("Magenta", answer[3]);
+            Assert.AreEqual("Yellow", answer[4]);
+            Assert.AreEqual("Red", answer[5]);
+            Assert.AreEqual("Green", answer[2]);
+            Assert.AreEqual("Blue", answer[1]);
+            Assert.AreEqual("White", answer[0]);
         }
 
         [TestMethod]
         public void Test5()
         {
-            Microcontroller module = new Microcontroller(bomb, streamWriter, "Top Left", "LEDS", 10, 2, 3);
+            Microcontroller module = new Microcontroller(bomb, io, TL, "LEDS", 10, 2, 3);
 
-            List<Color> list = module.Solve();
-            Assert.AreEqual("Green", list[0].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Red", list[1].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Magenta", list[2].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("White", list[3].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("White", list[4].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("White", list[5].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Yellow", list[6].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("Blue", list[7].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("White", list[8].Name.Replace("[", "").Replace("]", ""));
-            Assert.AreEqual("White", list[9].Name.Replace("[", "").Replace("]", ""));
-            streamWriter.Close();
+            List<Color> colors = module.Solve();
+
+            List<string> answer = ConvertColorToString(colors);
+
+            io.Close();
+
+            Assert.AreEqual("Green", answer[0]);
+            Assert.AreEqual("Red", answer[1]);
+            Assert.AreEqual("Magenta", answer[2]);
+            Assert.AreEqual("White", answer[3]);
+            Assert.AreEqual("White", answer[4]);
+            Assert.AreEqual("White", answer[9]);
+            Assert.AreEqual("White", answer[8]);
+            Assert.AreEqual("Blue", answer[7]);
+            Assert.AreEqual("Yellow", answer[6]);
+            Assert.AreEqual("White", answer[5]);
         }
+
+        private List<string> ConvertColorToString(List<Color> list)
+        {
+            List<string> answer = new List<string>();
+
+            foreach(Color color in list) 
+            {
+                string s = "";
+
+                foreach (char c in color.ToString())
+                {
+                    if (c != '[' && c != ']')
+                    {
+                        s += c;
+                    }
+                }
+
+                s = s.Remove(0, 6);
+                answer.Add(s);
+            }
+
+            return answer;
+        }
+
+
     }
+
+
+
 }
