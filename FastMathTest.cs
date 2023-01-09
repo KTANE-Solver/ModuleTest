@@ -9,8 +9,7 @@ namespace ModuleTest
     [TestClass]
     public class FastMathTest
     {
-        //https://ktane.timwi.de/lfa#file=de57655e36f71b851dff8bcc3a339738dbdc2da0
-
+        //https://ktane.timwi.de/More/Logfile%20Analyzer.html#file=8e036b85b281a039297f09a0eb7e329ff5e5981a;bomb=K11EN8
 
         StreamWriter io = new StreamWriter("dummy.txt");
 
