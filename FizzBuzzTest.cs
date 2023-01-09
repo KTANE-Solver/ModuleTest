@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace ModuleTest
 {
-    //https://ktane.timwi.de/lfa#file=1c5e8afec1479c495dee626a21f040d55766ce95
+    //https://ktane.timwi.de/More/Logfile%20Analyzer.html#file=30df1d7112aa113134d03961af225e222a9ef20b;bomb=G51EC5
 
-    
+
 
     [TestClass]
     public class FizzBuzzTest
