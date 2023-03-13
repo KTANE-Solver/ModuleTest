@@ -35,7 +35,7 @@ namespace ModuleTest
 
             //compatile coordinates: [0,5] [2,1] [5,0]
 
-            module.FindCardinal();
+            module.FindCardinal(true);
 
             _3DMaze.Node playerPos = module.PlayerPosition;
 
@@ -88,7 +88,7 @@ namespace ModuleTest
 
             //compatile coordinates: [1,0] [3,4] [6,5]
 
-            module.FindCardinal();
+            module.FindCardinal(true);
 
             _3DMaze.Node playerPos = module.PlayerPosition;
 
@@ -140,7 +140,7 @@ namespace ModuleTest
 
             //compatile coordinates: [1,5] [6,0] [6,6]
 
-            module.FindCardinal();
+            module.FindCardinal(true);
 
             _3DMaze.Node playerPos = module.PlayerPosition;
 
@@ -192,7 +192,7 @@ namespace ModuleTest
 
             //compatile coordinates: [1,6] [2,1] [6,4]
 
-            module.FindCardinal();
+            module.FindCardinal(true);
 
             _3DMaze.Node playerPos = module.PlayerPosition;
 
@@ -244,7 +244,7 @@ namespace ModuleTest
 
             //compatile coordinates: [0,5] [2,1] [5,0]
 
-            module.FindCardinal();
+            module.FindCardinal(true);
 
             _3DMaze.Node playerPos = module.PlayerPosition;
 
